@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_hmpg.css">
+    <title>VELA</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image" href="">
+    <script src="https://kit.fontawesome.com/4a74bfd6d0.js" crossorigin="anonymous"></script>
+    <script src="contact.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img class="logo" src="/images/VELA Logo Black 3.png" alt=""></a>
+        <ul class="menu">
+            <li><a href="#abt"> about us </a></li>
+            <li> <a href="#fleet">our fleet</a></li>
+            <li> <a href="#rent">rent</a></li>
+            <li> <a href="#contact">contacts</a></li>
+        </ul>
+    </header>
+    <!-- The Modal -->
+    <div id="quoteModal" class="modal">
+        <!-- Modal content -->
+        
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Request quote</h2>
+            <p>Leave us your contact details and we'll get in touch to send you a quote.</p>
+            <!-- Start of Formspree form -->
+            <form id="quoteForm" action="https://formspree.io/f/mpzbpjdj" method="POST">
+                <div class="input-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="tel" name="phone" placeholder="Phone" required>
+                </div>
+                <input type="email" name="email" placeholder="Email" required>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit" id="submitBtn" class="pointer">SEND</button>
+            </form>
+            <!-- End of Formspree form -->
+        </div>
+        
+    </div>
+    <section class="hero">
+        <div class="video-section">
+            <!-- Vídeo para telas maiores -->
+            <video autoplay loop muted playsinline id="horizontal-video">
+                <source src="videos/VELA - Horizontal.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <!-- Vídeo para telas menores -->
+            <video autoplay loop muted playsinline id="vertical-video">
+                <source src="videos/VELA - Horizontal.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+            <div class="gradient-overlay"></div>
+            <div class="content">
+                <h1 class="banner_txt">
+                    luxury <br>
+                    customs
+                </h1>
+                <button class="quote_btn pointer" id="myBtn">REQUEST QUOTE</button>
+
+            </div>
+        </div>
+
+    </section>
+    <div id="abt" class="abt">
+        <div class="abt_rot">
+            <p>about us</p>
+        </div>
+        <div class="abt_text">
+            <p>We are company dedicated to customize luxury vehicles so that you can make the most of your time or to
+                provide your clients with the best experience possible. <br><br>
+
+                Whatever is on your mind, we can do it! <br><br>
+
+                We believe that time is money so in our vehicles you’ll find everything you need to work while commuting
+                or so that you get ready on your way to that important meeting.<br><br>
+
+                You just want to relax? We’ve got you! You can keep up with that show you’ve been binge watching on
+                Netflix or play some playstation to blow off some steam. Your trips don’t have to be boring nor a waste
+                of time!<br><br>
+            </p>
+        </div>
+
+
+    </div>
+    <section id="fleet" class="fleet">
+        <div class="fleet_title">
+            <p>our fleet</p>
+        </div>
+        <div id="carousel1" class="carousel-container">
+            <div class="carousel">
+                <img src="/images/vela36.jpg" alt="" draggable="false">
+                <img src="/images/vela2.jpg" alt="" draggable="false">
+                <img src="/images/vela54.jpg" alt="" draggable="false">
+                <img src="/images/vela47.jpg" alt="" draggable="false">
+                <img src="/images/vela51.jpg" alt="" draggable="false">
+
+
+                <img src="/images/vela3.jpg" alt="" draggable="false">
+                <img src="/images/vela4.jpg" alt="" draggable="false">
+                <img src="/images/vela8.jpg" alt="" draggable="false">
+                <img src="/images/vela9.jpg" alt="" draggable="false">
+                <img src="/images/vela10.jpg" alt="" draggable="false">
+                <img src="/images/vela13.jpg" alt="" draggable="false">
+                <img src="/images/vela16.jpg" alt="" draggable="false">
+                <img src="/images/vela17.jpg" alt="" draggable="false">
+                <img src="/images/vela18.jpg" alt="" draggable="false">
+                <img src="/images/vela19.jpg" alt="" draggable="false">
+                <img src="/images/vela20.jpg" alt="" draggable="false">
+                <img src="/images/vela21.jpg" alt="" draggable="false">
+                <img src="/images/vela23.jpg" alt="" draggable="false">
+                <img src="/images/vela24.jpg" alt="" draggable="false">
+                <img src="/images/vela27.jpg" alt="" draggable="false">
+                <img src="/images/vela30.jpg" alt="" draggable="false">
+ 
+                <img src="/images/vela59.jpg" alt="" draggable="false">
+                <img src="/images/vela62.jpg" alt="" draggable="false">
+                <img src="/images/vela63.jpg" alt="" draggable="false">
+                <img src="/images/vela64.jpg" alt="" draggable="false">
+                <img src="/images/vela67.jpg" alt="" draggable="false">
+                <img src="/images/vela70.jpg" alt="" draggable="false">
+                <img src="/images/vela74.jpg" alt="" draggable="false">
+                <img src="/images/vela75.jpg" alt="" draggable="false">
+
+            </div>
+
+            <div class="arrow-icons">
+                <i id="left" class="fas fa-chevron-left carousel-prev"></i>
+                <i id="right" class="fas fa-chevron-right carousel-next"></i>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="offers">
+        <div class="offers_title">
+            <p>latest offers</p>
+        </div>
+        <div id="carousel2" class="carousel-container">
+            <div class="carousel">
+
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+                <div class="of_card">
+                    <img src="/images/of1.jpg" alt="" draggable="false">
+                    <h1>LUXURY VIP SPRINTER BLH56</h1>
+                    <span>€ 225 000,000</span>
+                    <div class="stat_card"> UNDER CONSTRUCTION</div>
+                </div>
+            </div>
+
+            <div class="arrow-icons">
+                <i id="left" class="fas fa-chevron-left carousel-prev"></i>
+                <i id="right" class="fas fa-chevron-right carousel-next"></i>
+            </div>
+        </div>
+    </section> -->
+    <section id="rent" class="rent">
+        <div class="rent_title">
+<p>rent your VELA</p>
+        </div>
+        <div class="rent_buttons">
+            <a href="tel:+351911033748"><i class="fa fa-phone" aria-hidden="true"></i><span>+351 911033748 </span></a>
+            <a href="https://wa.me/351911033748"><span><i class="fa fa-whatsapp" aria-hidden="true"></i>send message</span></a>
+        </div>
+
+    </section>
+    <section id="contact" class="contact">
+        <div class="contact_rot">
+            <p>contact</p>
+        </div>
+        <div class="contact_form">
+            <form action="https://formspree.io/f/mpzbpjdj" method="POST" id="my-form">
+                <div class="form-group">
+                    <label for="firstName"></label>
+                    <input class="upform" type="text" id="name" name="name" placeholder="name">
+                    <label for="latsName"></label>
+                    <input class="upform left" type="text" id="phone" name="phone" placeholder="phone">
+                </div>
+                <div class="form-group ">
+                    <label for="email"></label>
+                    <input class="email" type="email" id="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <label for="message"></label>
+                    <textarea name="message" id="message" cols="30" rows="5" placeholder="message"></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="sub_btn pointer">SEND</button>
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="icons">
+            <i class="fa-brands fa-tiktok" style="color: #ffffff;"></i>
+            <a href="https://www.instagram.com/velacustoms?igsh=MTZobXdocWg0ZHZuag=="><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        </div>
+        <div class="copyright">
+            <p>© VELA 2024</p>
+        </div>
+
+
+    </section>
+   
+    <script>
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header'); // Adjust this if your header selector is different
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('quoteModal');
+        // Get the button that opens the modal
+        var btn = document.getElementById('myBtn');
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName('close')[0];
+        // Get the body element
+        var body = document.body;
+
+        // When the user clicks the button, open the modal and disable body scroll
+        btn.onclick = function () {
+            modal.style.display = 'block';
+            body.classList.add('body-no-scroll');
+        }
+
+        // When the user clicks on <span> (x), close the modal and enable body scroll
+        span.onclick = function () {
+            modal.style.display = 'none';
+            body.classList.remove('body-no-scroll');
+        }
+
+        // When the user clicks anywhere outside of the modal, close it and enable body scroll
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                body.classList.remove('body-no-scroll');
+            }
+        }
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('quoteModal').style.display = 'none';
+
+            document.getElementById('myBtn').addEventListener('click', () => {
+                document.getElementById('quoteModal').style.display = 'block';
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('quoteForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Change button text to indicate loading
+                var button = document.getElementById('submitBtn');
+                button.innerHTML = 'Sending...';
+
+                // Form data to be sent
+                var formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        // On success, change the button text to a thank you message
+                        button.innerHTML = 'Thank You!';
+                        // Optionally, disable the button
+                        button.disabled = true;
+                        // Clear the form fields
+                        form.reset();
+                    } else {
+                        // On failure, show an error message
+                        button.innerHTML = 'Error. Try again.';
+                        response.json().then(data => {
+                            if (data.errors) {
+                                // Display the first error message
+                                console.error(data.errors[0]);
+                            }
+                        });
+                    }
+                }).catch(error => {
+                    // On network error, show an error message
+                    button.innerHTML = 'Network Error. Try again.';
+                    console.error(error);
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('a[href="#abt"], a[href="#fleet"]').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var headerHeight = document.querySelector('header').offsetHeight;
+                    var targetSection = document.querySelector(this.getAttribute('href'));
+                    window.scrollTo(0, targetSection.offsetTop - headerHeight - 20);
+                });
+            });
+        });
+    </script>
+    <script>$(document).ready(function() {
+        function setupCarousel(carouselId) {
+            const $carousel = $(`${carouselId} .carousel`);
+            const $leftArrow = $(`${carouselId} .carousel-prev`);
+            const $rightArrow = $(`${carouselId} .carousel-next`);
+    
+            function updateArrowVisibility() {
+                const maxScrollLeft = $carousel[0].scrollWidth - $carousel.outerWidth();
+                $leftArrow.css('visibility', $carousel.scrollLeft() > 0 ? 'visible' : 'hidden');
+                $rightArrow.css('visibility', $carousel.scrollLeft() < maxScrollLeft ? 'visible' : 'hidden');
+            }
+    
+            $carousel.on('scroll', updateArrowVisibility);
+    
+            $leftArrow.click(function() {
+                $carousel.animate({ scrollLeft: '-=' + $carousel.width() }, 'slow', updateArrowVisibility);
+            });
+    
+            $rightArrow.click(function() {
+                $carousel.animate({ scrollLeft: '+=' + $carousel.width() }, 'slow', updateArrowVisibility);
+            });
+    
+            updateArrowVisibility(); // Initial check to set visibility correctly
+        }
+    
+        setupCarousel('#carousel1');
+        setupCarousel('#carousel2');
+    });
+    $(document).ready(function() {
+    function makeCarouselDraggable(carouselId) {
+        const $carousel = $(`${carouselId} .carousel`);
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        $carousel.on('mousedown touchstart', function(e) {
+            isDragging = true;
+            startX = e.pageX || e.originalEvent.touches[0].pageX;
+            scrollLeft = this.scrollLeft;
+            e.preventDefault();
+        });
+
+        $(document).on('mousemove touchmove', function(e) {
+            if (!isDragging) return;
+            const x = e.pageX || e.originalEvent.touches[0].pageX;
+            const walk = (x - startX); // Adjust for sensitivity, maybe multiply by a factor
+            $carousel.scrollLeft(scrollLeft - walk);
+        });
+
+        $(document).on('mouseup touchend', function() {
+            isDragging = false;
+        });
+    }
+
+    makeCarouselDraggable('#carousel1');
+    makeCarouselDraggable('#carousel2');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const setupDraggableCarousel = (carouselId) => {
+        const carousel = document.getElementById(carouselId);
+        let isDragging = false, startX, scrollLeft, velocity, rafId;
+
+        function startDrag(e) {
+            isDragging = true;
+            startX = e.touches ? e.touches[0].pageX : e.pageX;
+            scrollLeft = carousel.scrollLeft;
+            carousel.style.scrollBehavior = 'auto'; // Disable smooth scrolling
+            velocity = 0;
+            if (rafId) {
+                cancelAnimationFrame(rafId);
+            }
+            e.preventDefault();
+        }
+
+        function drag(e) {
+            if (!isDragging) return;
+            const x = e.touches ? e.touches[0].pageX : e.pageX;
+            const dx = x - startX;
+            const newScrollLeft = scrollLeft - dx;
+            velocity = dx;
+            carousel.scrollLeft = newScrollLeft;
+        }
+
+        function endDrag() {
+            isDragging = false;
+            carousel.style.scrollBehavior = 'smooth'; // Re-enable smooth scrolling
+            continueMomentum();
+        }
+
+        function continueMomentum() {
+            if (Math.abs(velocity) > 0) {
+                carousel.scrollLeft += velocity;
+                velocity *= 0.95; // Friction factor
+                rafId = requestAnimationFrame(continueMomentum);
+            }
+        }
+
+        carousel.addEventListener('mousedown', startDrag);
+        carousel.addEventListener('mousemove', drag);
+        carousel.addEventListener('mouseup', endDrag);
+        carousel.addEventListener('mouseleave', endDrag);
+
+        carousel.addEventListener('touchstart', startDrag, { passive: false });
+        carousel.addEventListener('touchmove', drag, { passive: false });
+        carousel.addEventListener('touchend', endDrag);
+    };
+
+    setupDraggableCarousel('carousel1');
+    setupDraggableCarousel('carousel2');
+});</script>
+</body>
+
+</html>
